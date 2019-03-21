@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LongLifeThreadViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8f-A7-EFZ">
+                    <rect key="frame" x="108" y="358.5" width="159" height="30"/>
+                    <state key="normal" title="Hello, Long Life Thread"/>
+                    <connections>
+                        <action selector="sayHelloInLongLifeThread:" destination="-1" eventType="touchUpInside" id="bUx-WM-lb6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ4-c0-053">
+                    <rect key="frame" x="114.5" y="278.5" width="146" height="30"/>
+                    <state key="normal" title="Hello, Normal Thread"/>
+                    <connections>
+                        <action selector="sayHelloInNormalThread:" destination="-1" eventType="touchUpInside" id="zIK-4G-VJe"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="t8f-A7-EFZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8mI-3z-4oA"/>
+                <constraint firstItem="t8f-A7-EFZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="40" id="ToP-ZY-LrZ"/>
+                <constraint firstItem="VZ4-c0-053" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-40" id="bP1-Fc-DQ7"/>
+                <constraint firstItem="VZ4-c0-053" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yZM-Eq-k9n"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>
